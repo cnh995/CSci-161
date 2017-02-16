@@ -1,0 +1,69 @@
+import java.util.*;
+
+public class Ship extends Transporter
+{
+    private boolean isSunk = false;
+
+    public void sink()
+    {
+	isSunk = true;
+    }
+
+    public void getSunk()
+    {
+	return isSunk;
+    }
+
+    public Ship(String inName, double inMax, int inSpeed, int inDist)
+    {
+         setName(inName);
+         setMax(inMax);
+         setSpeed(inSpeed);
+         setDistance(inDist);
+         setID();
+    }
+    
+    public Ship(String inName, double inMax, int inSpeed)
+    {
+         setName(inName);
+         setMax(inMax);
+         setSpeed(inSpeed);
+         int tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+         setID();
+    }
+    
+    public Ship(String inName, double inMax)
+    {
+         setName(inName);
+         setMax(inMax);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+         setID();
+    }
+    
+    public Ship(String inName)
+    {
+         setName(inName);
+         double temp = (gen.nextDouble() * 700) + 50;
+         setMax(temp);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+         setID();
+    }
+    
+    public Ship()
+    {
+         double temp = (gen.nextDouble() * 700) + 50;
+         setMax(temp);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+         setID();
+    }
+}
