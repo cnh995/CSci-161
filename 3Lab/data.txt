@@ -1,0 +1,4 @@
+lays,5
+dummy,10
+gum,12
+cookie,8

@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class HashSetExample 
+{
+    public static void main(String[] args)
+    {
+	HashSet myHash = new HashSet();
+
+	String[] names = {John, Steve, Bob, Mary, Tina};
+
+	for(String name : names)
+		{
+			System.out.println(name);
+			myHash.add(name);
+		}
+    }
+
+}

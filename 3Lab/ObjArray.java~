@@ -1,0 +1,41 @@
+/**
+ *
+ */
+public class ObjArray
+{
+    private String name;
+    private int quantity;
+
+    /**
+     *
+     */
+    public ObjArray(String inName, int inQuantity)
+    {
+	name = inName;
+	quantity = inQuantity;
+    }
+
+    /**
+     *
+     */
+    public String getName()
+    {
+	return name;
+    }
+
+    /**
+     *
+     */
+    public void refill()
+    {
+	quantity += 5;
+    }
+
+    /**
+     *
+     */
+    public int getQuantity()
+    {
+	return quantity;
+    }
+}

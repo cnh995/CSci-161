@@ -1,0 +1,27 @@
+1. Sorting the array is necessary to include with the binary search time, because binary searches need to know a median which is difficult to find without the array being sorted.
+
+2. Binary search ran longer than sequential search with smaller arrays of numbers.
+
+Binary was faster than sequential with larger arrays of numbers.
+
+BOGO was faster than binary and sequential with array size of zero.
+
+3. With smaller arrays of numbers, sorting the array will take proportionately longer. Sequential searches are able to start right away, while binary searches have the overhead of sorting before they can start the search.
+
+With larger arrays, sorting the array gives a reference as to which values to check next (if the value we are looking for is larger or smaller than the median, we know where to go from there). With sequential searches, we don't have that.
+
+When the array has no values, BOGO search's only guess can be index 0, and we are looking for a value of null, so the search succeeds on the first guess.
+
+4. I would use binary search on large sets of data, and sequential on smaller sets. As shown in question 3, binary search is much faster on these larger sets, and sequential is faster for the smaller one. I would never use BOGO search in any case. If we are searching, I am assuming we have more than 0 pieces of data.
+
+5. The way BOGO is implemented currently, there is a chance that the index containing the desired value will never be found. The search will continuously guess indexes until the value is found, but if the value is not in the array, it will search forever looking for a value that is not even in the array.
+
+6. I would improve the binary search by using recursion as we did in one of the lectures, which could build and search through an optimized binary tree.
+
+HashSet:
+I think that a HashSet would be good for storing passwords for users on a website. Storing the key to the value instead of just the value itself can improve security.
+
+Recursion output:
+[2, -2, -3]
+For the given values, the closest the two partitions can get is: 3
+
