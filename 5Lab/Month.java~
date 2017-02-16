@@ -1,0 +1,23 @@
+
+public class Month
+{
+    int monthNumber;
+
+    public Month()
+    {
+	setMonthNumber(1);
+    }
+
+    public Month(int num)
+    {
+	if(num >= 1 || num <= 12)
+	    setMonthNumber(num);
+	else
+	    setMonthNumber(1);
+    }
+		      
+    public void setMonthNumber(int num)
+    {
+	monthNumber = num;
+    }
+}

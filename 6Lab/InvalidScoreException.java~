@@ -1,0 +1,17 @@
+package lab6;
+
+
+public class InvalidScoreException extends RuntimeException {
+
+
+	private static final long serialVersionUID = 1L;
+
+	public InvalidScoreException(){
+        super();
+    }
+
+    public InvalidScoreException(String message){
+        super(message);
+    }
+    
+}

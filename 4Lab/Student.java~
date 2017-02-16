@@ -1,0 +1,10 @@
+/**
+ *The Student class will set and store information about a student taking classes.
+ *
+ * @author Christian Hansen
+ */
+
+public class Student
+{
+
+}

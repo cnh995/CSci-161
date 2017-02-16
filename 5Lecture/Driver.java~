@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class Driver
+{
+
+    public static void main(String[] args)
+    {
+	Port thisPort = new Port();
+	System.out.println("Name of port: " + thisPort.getName());
+	System.out.println("Outbound cargo: " + thisPort.getOutbound());
+    }
+}
