@@ -1,0 +1,12 @@
+public class BrokenTableException extends Exception
+{
+    public BrokenTableException()
+    {
+	super("Error: too much weight was added to the table and it broke.\n");
+    }
+
+    public BrokenTableException(int inMax, int inWeightAdded)
+    {
+	super("Error: the maximum weight the table can hold is " + inMax + " and adding " + inWeightAdded + " was too much.\n");
+    }
+}

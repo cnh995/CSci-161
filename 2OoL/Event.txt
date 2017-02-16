@@ -1,0 +1,3 @@
+Swimming,.9,WATER
+Weightlifting,.9,GYM
+Shooting,.9,OUTDOOR

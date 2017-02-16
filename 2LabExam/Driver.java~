@@ -1,0 +1,7 @@
+public class Driver
+{
+    public static void main(string[] args)
+    {
+	System.out.println(integer.MAX_VALUE + " is the max value of an integer.");
+    }
+}

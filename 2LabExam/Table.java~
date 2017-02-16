@@ -1,0 +1,96 @@
+import java.util.*;
+
+public class Table implements Repairable
+{
+    private int weightCapacity = 0;
+    private int currentWeight = 0;
+    private double loadPercent = 0.0;
+    private int daysToFix = 0;
+    private boolean fixed = true;
+
+    public Table()
+    {
+	Random rng = new Random();
+	int capacity = rng.nextInt(476) + 25;
+	setCapacity(capacity);
+    }
+
+    public String toString()
+    {
+	String output = "";
+	output += "The capacity of this table is " +  getCapacity() + ".\n";
+	output += "The current weight on the table is " + getCurrentWeight() + ".\n";
+	output += "The percentage of current weight compared to capacity is " + percent() + "%.\n";
+
+	return output;
+    }
+
+    public int getCapacity()
+    {
+	return weightCapacity;
+    }
+
+    public int getCurrentWeight()
+    {
+	return currentWeight;
+    }
+
+    public void setCapacity(int inCapacity)
+    {
+	weightCapacity = inCapacity;
+    }
+
+    public void setCurrentWight(int inCurrent)
+    {
+	currentWeight = inCurrent;
+    }
+
+    public double percent()
+    {
+	loadPercent = ((double)(currentWeight) / (double)(weightCapacity)) * 100;
+	return loadPercent;
+    }
+
+    public void add(int inWeight) throws BrokenTableException
+    {
+	try
+	    {
+		if(currentWeight + inWeight <= weightCapacity)
+		    {
+			currentWeight += inWeight;
+		    }
+		else
+		    {
+			fixed = false;
+			throw new BrokenTableException(weightCapacity, currentWeight + inWeight);
+		    }
+	    }
+	catch(BrokenTableException bte)
+	    {
+		Random rng = new Random();
+		daysToFix = rng.nextInt(9) + 1;
+		System.err.println(bte.getMessage());
+		fix();
+	    }
+    }
+
+    public int daysUntilFixed()
+    {
+	return daysToFix;
+    }
+
+    public void fix()
+    {
+	while(daysToFix != 0)
+	    {
+		System.out.println("This table will take " + daysToFix + " more days to fix.");
+		daysToFix -= 1;
+	    }
+
+	if(daysToFix == 0)
+	    {
+		System.out.println("The table is fixed!\n");
+		fixed = true;
+	    }
+    }
+}
