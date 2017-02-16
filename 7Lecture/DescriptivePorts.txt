@@ -1,0 +1,18 @@
+Port 1:
+	Name:	Winnipeg
+	Outbound Cargo:	13000.5
+
+---------------------------
+
+Port 2:
+	Name:	Dublin
+	Outbound Cargo:	3201.25
+
+---------------------------
+
+Port 3:
+	Name:	Beverly Hills
+	Outbound Cargo:	902.1
+
+---------------------------
+

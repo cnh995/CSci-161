@@ -1,0 +1,102 @@
+import java.util.*;
+public class Port
+{
+    private String name = "";
+    private ArrayList<Cargo> local = new ArrayList<Cargo>(); //Local Cargo
+    private ArrayList<Cargo> outbound = new ArrayList<Cargo>(); //Outbound Cargo
+    private Random gen = new Random();
+
+    public Port(String inName, ArrayList<Cargo> inCargo)
+    {
+         setName(inName);
+
+	 for(int i = 0; i < inCargo.size(); i++)
+	     {
+		 addOutbound(inCargo.get(i));
+	     }
+    }
+    
+    public Port(String inName)
+    {
+         setName(inName);
+    }
+     
+    public ArrayList<Cargo> getLocal()
+    {
+         return local; 
+    }
+
+    public ArrayList<Cargo> getOutbound()
+    {
+         return outbound; 
+    }
+
+    public double getLocalTonnage()
+    {
+	double total = 0.0;
+
+	for(int i = 0; i < local.size(); i++)
+	    {
+		total += local.get(i);
+	    }
+
+	return total;
+    }
+
+    public double getOutboundTonnage()
+    {
+	double total = 0.0;
+
+	for(int i = 0; i < outbound.size(); i++)
+	    {
+		total += local.get(i);
+	    }
+
+	return total;
+    }
+
+    public String getName()
+    {
+         return name;
+    }
+
+    /*
+      This is stars inside
+      it does multiple lines
+     */
+
+    public void addOutbound(Cargo inCargo)
+    {
+	outbound.add(inCargo);
+    }
+
+    public void setName(String inName)
+    {
+         name = inName;
+    }
+    
+    public double unload(Ship targetShip, double amount)
+    {
+         double actual = 0.0;
+         actual = targetShip.unload(amount);
+         local += actual;
+         return actual;
+         
+    }
+
+    public double load(Ship targetShip, double amount)
+    {
+         double actual = 0.0;
+         
+         if (amount > getOutbound())
+         {
+              amount = getOutbound();
+         }
+         
+         actual = targetShip.load(amount);
+         outbound -= actual;
+         return actual;
+         
+    }
+
+}

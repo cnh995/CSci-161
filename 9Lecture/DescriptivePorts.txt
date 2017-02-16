@@ -1,0 +1,36 @@
+Port:
+	Name:	Winnipeg
+	Outbound Cargo:	13000.5
+
+---------------------------
+
+Port:
+	Name:	Dublin
+	Outbound Cargo:	3201.25
+
+---------------------------
+
+Port:
+	Name:	Beverly Hills
+	Outbound Cargo:	902.1
+
+---------------------------
+
+Port:
+	Name:	London
+	Outbound Cargo:	1776.74
+
+---------------------------
+
+Port:
+	Name:	Barcelona
+	Outbound Cargo:	1492.11
+
+---------------------------
+
+Port:
+	Name:	Norway
+	Outbound Cargo:	9134.58
+
+---------------------------
+

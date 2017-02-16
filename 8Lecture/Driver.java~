@@ -1,0 +1,120 @@
+import java.util.*; // Need Random
+import java.io.*; //Need File IO Tools
+public class Driver
+{
+
+    public static void main(String[] args) throws FileNotFoundException
+    {
+         //Create a link to an input file
+         File portFile = new File("Ports.txt");
+         
+         //Open input file
+         Scanner inputPorts = new Scanner(portFile);
+         
+         //Read a line
+         String line = inputPorts.nextLine();
+         
+         //Break the line into its components
+         String[] parts = line.split("%");
+         
+         //Use the data to make the first port
+         Port port1 = new Port(parts[0], Double.parseDouble(parts[1])); //Index 0 has first part (which is name); Index 1 has Outbound, which needs to be converted to a double
+         
+         //Check that the input data was correctly transfered to the object
+         System.out.println("Port 1:");
+         System.out.println("\tName:\t" + port1.getName());
+         System.out.println("\tOutbound Cargo:\t" + port1.getOutbound());
+         System.out.println("\n---------------------------\n");
+
+         //Read next line
+         line = inputPorts.nextLine();
+         
+         //Break the line into its components
+         parts = line.split("%");
+         
+         //Use the data to make the first port         
+         Port port2 = new Port(parts[0], Double.parseDouble(parts[1]));
+         
+         //Check that the input data was correctly transfered to the object
+         System.out.println("Port 2:");
+         System.out.println("\tName:\t" + port2.getName());
+         System.out.println("\tOutbound Cargo:\t" + port2.getOutbound());
+         System.out.println("\n---------------------------\n");
+
+         //Read next line
+         line = inputPorts.nextLine();
+         
+         //Break the line into its components
+         parts = line.split("%");
+         
+         //Use the data to make the first port         
+         Port port3 = new Port(parts[0], Double.parseDouble(parts[1]));
+         
+         //Check that the input data was correctly transfered to the object
+         System.out.println("Port 3:");
+         System.out.println("\tName:\t" + port3.getName());
+         System.out.println("\tOutbound Cargo:\t" + port3.getOutbound());
+         System.out.println("\n---------------------------\n");
+
+         //Close input file
+         inputPorts.close();
+         
+         //Your turn, deal with Ship!
+         Ship ship1 = new Ship();
+         System.out.println("Ship 1:");
+         System.out.println("\tName:\t" + ship1.getName());
+         System.out.println("\tMax Cargo:\t" + ship1.getMax());
+         System.out.println("\tSpeed:\t" + ship1.getSpeed());
+         System.out.println("\tDistance to Destination:\t" + ship1.getDistance());
+         System.out.println("\n---------------------------\n");
+         
+         Ship ship2 = new Ship();
+         System.out.println("Ship 2:");
+         System.out.println("\tName:\t" + ship2.getName());
+         System.out.println("\tMax Cargo:\t" + ship2.getMax());
+         System.out.println("\tSpeed:\t" + ship2.getSpeed());
+         System.out.println("\tDistance to Destination:\t" + ship2.getDistance());
+         System.out.println("\n---------------------------\n");
+
+         Ship ship3 = new Ship();
+         System.out.println("Ship 3:");
+         System.out.println("\tName:\t" + ship3.getName());
+         System.out.println("\tMax Cargo:\t" + ship3.getMax());
+         System.out.println("\tSpeed:\t" + ship3.getSpeed());
+         System.out.println("\tDistance to Destination:\t" + ship3.getDistance());
+         System.out.println("\n---------------------------\n");
+         
+         //Write-to-File-Section
+         //Create a link to an output file
+         File portOutputFile = new File("DescriptivePorts.txt");
+         
+         //Open the output file
+         PrintWriter outPorts = new PrintWriter(portOutputFile);
+         
+         //Write port1's data to output file
+         outPorts.println("Port 1:");
+         outPorts.println("\tName:\t" + port1.getName());
+         outPorts.println("\tOutbound Cargo:\t" + port1.getOutbound());
+         outPorts.println("\n---------------------------\n");
+         
+         //Write port2's data to output file
+         outPorts.println("Port 2:");
+         outPorts.println("\tName:\t" + port2.getName());
+         outPorts.println("\tOutbound Cargo:\t" + port2.getOutbound());
+         outPorts.println("\n---------------------------\n");         
+         
+         //Write port3's data to output file
+         outPorts.println("Port 3:");
+         outPorts.println("\tName:\t" + port3.getName());
+         outPorts.println("\tOutbound Cargo:\t" + port3.getOutbound());
+         outPorts.println("\n---------------------------\n");        
+         
+         //Close output file
+         outPorts.close();
+         
+         //Your turn; write the 3 ships' data to a different output file
+         
+    }
+
+
+}

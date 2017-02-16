@@ -1,0 +1,48 @@
+Ship 1:
+	Name:	HMCS Arrogant Worms
+	Max Cargo:	24.321
+	Speed:	15
+	Distance to Destination:	325
+
+---------------------------
+
+Ship 1:
+	Name:	LE Gaelic Storm
+	Max Cargo:	142.234
+	Speed:	20
+	Distance to Destination:	701
+
+---------------------------
+
+Ship 1:
+	Name:	USS Weezer
+	Max Cargo:	50.32
+	Speed:	45
+	Distance to Destination:	101
+
+---------------------------
+
+Ship 1:
+	Name:	HMS Herman's Hermits
+	Max Cargo:	19.8
+	Speed:	5
+	Distance to Destination:	23
+
+---------------------------
+
+Ship 1:
+	Name:	ESPS Radio Futura
+	Max Cargo:	199.2
+	Speed:	7
+	Distance to Destination:	1979
+
+---------------------------
+
+Ship 1:
+	Name:	KNM Ylvis
+	Max Cargo:	2103.82
+	Speed:	10
+	Distance to Destination:	1905
+
+---------------------------
+

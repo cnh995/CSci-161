@@ -1,0 +1,221 @@
+import java.util.*;
+public class Ship
+{
+    private String name = "";
+    private double mct = 0.0; //Max Cargo Tonnage
+    private ArrayList<Cargo> cct = new ArrayList<Cargo>();
+    private int speed = 0; //Speed of Ship
+    private int dist = 0; //Distance between Ship and its current destination
+    private Random gen = new Random();
+    private int shipNum = 0;
+    private static int currentShipNum = 0;
+
+    private void setShipNum()
+    {
+	shipNum = currentShipNum++;
+    }
+
+    public int getShipNumber()
+    {
+	return shipNum;
+    }
+
+    public int getCurrentShipNumber()
+    {
+	return currentShipNum;
+    }
+    
+    public Ship(String inName, double inMax, int inSpeed, int inDist)
+    {
+         setName(inName);
+         setMax(inMax);
+         setSpeed(inSpeed);
+         setDistance(inDist);
+	 setShipNum();
+    }
+    
+    public Ship(String inName, double inMax, int inSpeed)
+    {
+         setName(inName);
+         setMax(inMax);
+         setSpeed(inSpeed);
+         int tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+	 setShipNum();
+    }
+    
+    public Ship(String inName, double inMax)
+    {
+         setName(inName);
+         setMax(inMax);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+	 setShipNum();
+    }
+    
+    public Ship(String inName)
+    {
+         setName(inName);
+         double temp = (gen.nextDouble() * 700) + 50;
+         setMax(temp);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+	 setShipNum();
+    }
+    
+    public Ship()
+    {
+         double temp = (gen.nextDouble() * 700) + 50;
+         setMax(temp);
+         int tmp = gen.nextInt(51)+10;
+         setSpeed(tmp);
+         tmp = gen.nextInt(900)+101;
+         setDistance(tmp);
+	 setShipNum();
+    }
+
+    public String toString()
+    {
+	String output = "";
+	output = "This Ship object, #" + getShipNumber() + ", has the following attribute values:\n";
+	output = output + "\tShip name: " + getName() + "\n";
+	output = output + "\tMaximum cargo: " + getMax() + " tons\n";
+	output = output + "\tCurrent speed: " + getSpeed() + "miles per hour\n";
+	output = output + "\tDistance from destination: " + getDistance() + " miles\n";
+	output = output + "\tThe next valid ship number will be " + getCurrentShipNumber() + "\n";
+
+	return output;
+    }
+    
+    public void setSpeed(int inSpeed)
+    {
+         if (inSpeed >= 0)
+         {
+              speed = inSpeed;
+         }
+    }
+
+    public void setDistance(int inDist)
+    {
+         if (inDist >= 0)
+         {
+              dist = inDist;
+         }
+    }
+    
+    public int getSpeed()
+    {
+         return speed;
+    }
+    
+    public int getDistance()
+    {
+         return dist;
+    }
+
+    public ArrayList<Cargo> getCurrentCargo()
+    {
+         return cct; 
+    }
+
+    public double getMax()
+    {
+         return mct; 
+    }
+
+    public String getName()
+    {
+         return name;
+    }
+
+    /*
+      This is stars inside
+      it does multiple lines
+     */
+
+    public void setMax(double inMax)
+    {
+         if (inMax >= 0)
+         {
+              mct = inMax;
+         }
+    }
+
+    public void setName(String inName)
+    {
+         name = inName;
+    }
+    
+    public double getCurrentCargoTonnage()
+    {
+         double total = 0.0;
+         for (Cargo unit : cct)
+         {
+              total += unit.getTonnage();
+         }
+         return total;
+    }
+    
+    public boolean load(Cargo inCargo)
+    {
+         if (inCargo.getTonnage() < 0)
+              return false;
+         if (inCargo.getTonnage() + getCurrentCargoTonnage() > getMax())
+              return false;
+         
+         cct.add(inCargo);
+         return true;
+
+    }
+
+    public ArrayList<Cargo> unload(String port)
+    {
+         ArrayList<Cargo> toUnload = new ArrayList<Cargo>();
+         for (int x = cct.size() - 1; x >= 0; x--)
+         {
+              if (cct.get(x).getDest().equals(port))
+              {
+                   toUnload.add(cct.get(x));
+                   cct.remove(x);
+              }
+         }
+         return toUnload;
+    }
+    
+    public ArrayList<Cargo> unloadAll()
+    {
+         ArrayList<Cargo> toUnload = new ArrayList<Cargo>();
+         for (Cargo unit : cct)
+         {
+              toUnload.add(unit);
+         }
+         cct.clear();
+         return toUnload;
+    }
+    
+    public void travel()
+    {
+         int traveled = 0;
+         
+         if (getDistance() == 0)
+         {
+              System.out.println("Ship is already in port or has no destination");
+         }
+         else if (getDistance() > getSpeed())
+         {
+              traveled = getDistance() - getSpeed();
+              setDistance(traveled);
+              System.out.println("Ship traveled " + getSpeed() + " units and is now " + getDistance() + " units from destination");
+         }
+         else if (getDistance() <= getSpeed())
+         {
+              setDistance(traveled);
+              System.out.println("The Ship: " + getName() + " has arrived at its destination");
+         }
+    }
+
+}

@@ -1,0 +1,6 @@
+Winnipeg%13000.5
+Dublin%3201.25
+Beverly Hills%902.10
+London%1776.74
+Barcelona%1492.11
+Norway%9134.58

@@ -1,0 +1,27 @@
+
+public class Driver {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		SinglyLinkedList<Integer> list = new SinglyLinkedList<>(); 
+		list.add(1);
+		list.add(1000);
+		list.add(2);
+		list.add(2);
+		list.add(3);
+		list.remove(3);
+		System.out.println(list.find(1));
+		System.out.println(list.toString());
+		
+		
+		SinglyLinkedList<String> stringList = new SinglyLinkedList<>(); 
+		stringList.add("Hey");
+		stringList.add("Hello");
+		stringList.add("Apple");
+		System.out.println(stringList.find("Hey"));
+		System.out.println(stringList.toString());
+		System.out.println(stringList.size());		
+		
+	}
+
+}

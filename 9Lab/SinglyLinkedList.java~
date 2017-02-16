@@ -1,0 +1,87 @@
+public class SinglyLinkedList<T extends Comparable<T>> {
+	int size;
+	private Node<T> head;
+
+	// LinkedList constructor
+	public SinglyLinkedList()
+	{
+		
+		head = new Node <T>(null);
+		size = 0;
+	}
+
+
+	public void add(T data)
+	{
+		
+	}
+
+	public boolean remove(int index)
+	
+	{
+		// removes the element at the specified position in this list.
+		return true;
+	}
+
+
+	public String toString()
+	{
+		String output = "";
+		return output;
+	}
+
+
+	public boolean find(T data)
+	{
+		
+	return false;
+	}
+
+
+
+	public int size()
+	
+	{
+		return size;
+	}
+
+
+	private class Node<E>
+	{
+		// reference to the next node in the chain,
+		// or null if there isn't one.
+		Node<E> next;
+		// data carried by this node.
+		// could be of any type you need.
+		E data;
+
+
+		// Node constructor
+		public Node(E data)
+		{
+			
+		}
+
+
+		public E getData()
+		{
+			return data;
+		}
+
+
+		public Node<E> getNext()
+		{
+			return next;
+		}
+
+		public void setNext(Node<E> next)
+		{
+			
+		}
+
+
+
+	}
+
+
+}

@@ -1,0 +1,24 @@
+Ship 1:
+	Name:	HMCS Arrogant Worms
+	Max Cargo:	24.321
+	Speed:	15
+	Distance to Destination:	325
+
+---------------------------
+
+Ship 2:
+	Name:	LE Gaelic Storm
+	Max Cargo:	142.234
+	Speed:	20
+	Distance to Destination:	701
+
+---------------------------
+
+Ship 3:
+	Name:	USS Weezer
+	Max Cargo:	50.32
+	Speed:	45
+	Distance to Destination:	101
+
+---------------------------
+

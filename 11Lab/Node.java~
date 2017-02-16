@@ -1,0 +1,20 @@
+public class Node
+{
+    private int value;
+    private Node next;
+    private Node previous;
+
+    public Node(int inValue)
+    {
+	value = inValue;
+	next = null;
+	previous = null;
+    }
+
+    public Node(int inValue, Node inNext, Node inPrevious)
+    {
+	value = inValue;
+	next = inNext;
+	previous = inPrevious;
+    }
+}
