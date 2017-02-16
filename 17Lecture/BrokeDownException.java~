@@ -1,0 +1,7 @@
+public class BrokeDownException extends Exception
+{
+    public BrokeDownException()
+    {
+	super("Error: \n");
+    }
+}

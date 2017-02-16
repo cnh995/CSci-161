@@ -1,0 +1,5 @@
+public interface Traveller
+{
+    //Can include attributes if you want
+    enum RouteType{WATER, AIR, RAIL, ROAD}
+}
