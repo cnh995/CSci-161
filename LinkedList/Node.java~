@@ -1,0 +1,30 @@
+public class Node
+{
+    private Transporter value = null;
+    private Node next = null;
+
+    public Node(Transporter inValue)
+    {
+	value = inValue;
+    }
+
+    public void setValue(Transporter inVal)
+    {
+	value = inVal;
+    }
+
+    public void setNext(Node newNext)
+    {
+	next = newNext;
+    }
+
+    public Transporter getValue()
+    {
+	return value;
+    }
+
+    public Node getNext()
+    {
+	return next;
+    }
+}

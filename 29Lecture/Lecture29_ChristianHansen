@@ -1,0 +1,7 @@
+1. Vectors fail in a more graceful way than arrays or ArrayLists; it will modify the structure of the vector while the iterator fails. This ensures that failures will be predictable, reducing the risk of non-deterministic behavior.
+2. LinkedLists must be accessed sequentially, since they are not sequentially ordered. Collections will be ordered by index and will be sequential in memory, allowing random access for getters, setters, and adding or removing data.
+3. HashSet offers constant time performance for basic operations, while TreeSet guarantees log(n) time. TreeSets are also sorted and have methods that are helpful when using an ordered set. HashSets can store null objects and are much faster in basic operations.
+4. TreeMaps are sorted by the natural ordering of its keys or by a Comparator, but do not allow null values or keys. HashMaps permit null values and keys, but doesn't guarantee a constant order for the values in the map.
+5. HashSet, TreeSet, ArrayList, and Vector all have iterators. The API documentation for each of these lists an iterator in the Method Summary.
+6. A Hashing function transforms a value into a shorter key that represents the original value. It is used to index and retrieve items in a map. This can be helpful with password storage, as storing passwords directly to a map may be easy to steal, but taking a map of keys will not be as easy to retrieve passwords from.
+7. A TreeMap will store keys, while a TreeSet stores objects.

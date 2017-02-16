@@ -1,0 +1,47 @@
+public class SLL
+{
+    private Node head = null;
+
+    public SLL()
+    {
+    }
+
+    public void add(Transporter input)
+    {
+	//Put input into a box
+	Node newNode = new Node(input);
+
+	//Put the new node into the correct place
+	//End of the list
+	//Check for empty list
+	if(head == null)
+	    {
+		head = newNode;
+	    }
+	else //The list isn't empty
+	    {
+		Node curr = head; //Start curr at head
+		while(curr.getNext() != null) //While current node doesn't point to null, move on
+		    {
+			curr = curr.getNext(); //When the current node points to null, we know we are at the end (if single linked list)
+		    }
+
+		//Reached the end, set last item's next node to newNode
+		curr.setNext(newNode);
+	    }
+    }
+
+    public String toString()
+    {
+	String output = "My list:\n";
+	Node curr = head;
+
+	while(curr != null) //Step through list
+	    {
+		output += curr.getValue() + "\n\n";
+		curr = curr.getNext();
+	    }
+
+	return output;
+    }
+}
