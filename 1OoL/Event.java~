@@ -1,0 +1,66 @@
+/**
+ * The Event object will store and give information about a specific event.
+ *
+ * @author Christian Hansen
+ */
+
+public class Event
+{
+    private String name;
+    private String venue;
+    private double popularity;
+    private String hasOccured = "No";
+    private String position = "TBD";
+
+    /**
+     * This constructor will assign the given inputs to their respective variables.
+     *
+     * @param inName This input is the name of the event.
+     * @param inVenue This input is the venue where the event is taking place.
+     * @param inPop This input is the popularity rating of the event.
+     */
+    public Event(String inName, String inVenue, double inPop)
+    {
+	setName(inName);
+	setVenue(inVenue);
+	setPop(inPop);
+    }
+
+    /**
+     * This setName method will set the name of the event to the input given.
+     *
+     * @param inName This input is the name of the event.
+     */
+    public setName(inName)
+    {
+	name = inName;
+    }
+
+    /**
+     * This setVenue method will set the venue the given input.
+     *
+     * @param inVenue This input is the venue where the event is taking place.
+     */
+    public setVenue(inVenue)
+    {
+	venue = inVenue;
+    }
+
+    /**
+     * This setPop method will set the popularity rating to the given input.
+     *
+     * @param inPop This input is the popularity rating given to this event.
+     */
+    public setPop(inPop)
+    {
+	popularity = inPop;
+    }
+
+    /**
+     *
+     */
+    public setAthlete1()
+    {
+
+    }
+}

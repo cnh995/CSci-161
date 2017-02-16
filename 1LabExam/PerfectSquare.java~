@@ -1,0 +1,53 @@
+
+/**
+ * The PerfectSquare class is used to check if a given number is a Perfect Square or not.
+ * A PerfectSquare is a number who's squareroot has no decimal component.
+ * <br><br>
+ * @author Scott Kerlin
+ * @version 1.0
+ * @since 2/19/2015
+ */
+ 
+public class PerfectSquare {
+ 
+     /**
+      * main accepts user input for processing.
+      * <br><br>
+      * main prompts the user to enter a number to check or a -1 or zero to exit.
+      * Any postitive int input value should produce a message indicating if that number was a perfect square or not
+      * @param args is required for main methods, but not used by this method
+      */  
+      public static void main(String[] args) {
+           boolean keepGoing = false;
+           Scanner keyboard = new Scanner(System.in);
+           while (keepGoing = true)
+           {
+                int value = keyboard.nextInt();
+                if (value < 0 )
+                {
+                     keepGoing = false;
+                }
+                else
+                {
+                     boolean yes = false;
+                     for (int x = 0; 0 <= value; x++)
+                     {
+                          if ((x * x).equals(value))
+                          {
+                               yes = true;
+                          }
+                     }
+                     
+                     if (yes)
+                     {
+                          System.out.println("Input is a PERFECT SQUARE");
+                     }
+                     else
+                     {
+                          System.out.println("Input IS NOT a perfect square");
+                     }
+                }
+           }
+      }
+}
+ 

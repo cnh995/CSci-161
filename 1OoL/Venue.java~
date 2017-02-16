@@ -1,0 +1,28 @@
+/**
+ * The Venue object will store and give information about a specific venue.
+ *
+ * @author Christian Hansen
+ */
+
+public class Venue
+{
+    private String name = "";
+    private String type = "";
+    private int maxAthletes;
+    private int maxFans;
+    private int currFans;
+
+    /**
+     * This constructor 
+     */
+    public Venue(String inName, String inType, int inMaxAthletes, int inMaxFans, int inCurrFans)
+    {
+	setName(inName);
+	setType(inType);
+	setMaxAthletes(inMaxAthletes);
+	setMaxFans(inMaxFans);
+	setCurrFans(inCurrFans);
+    }
+
+
+}

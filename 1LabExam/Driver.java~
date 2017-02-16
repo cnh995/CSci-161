@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+
+public class Driver
+{
+    public static void main(String[] args)
+    {
+	ArrayList<Pet> petList = new ArrayList<Pet>();
+
+	File petFile = new File("Pets.txt");
+
+	Scanner inputPets = new Scanner(petFile);
+
+	String line;
+	String[] parts;
+
+	while(inputPets.hasNext())
+	    {
+		line = inputPets.nextLine();
+		parts = line.split(";");
+		petList.add(new Pet());
+	    }
+    }
+}

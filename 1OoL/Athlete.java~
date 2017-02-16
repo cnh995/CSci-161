@@ -1,0 +1,72 @@
+/**
+ * The Athlete object will store and give information about a specific athlete.
+ *
+ * @author Christian Hansen
+ */
+
+public class Athlete
+{
+    private int athNum;
+    private String prefType;
+    private int stamina;
+    private int skill;
+    private int medals;
+
+    /**
+     * This constructor will take the given inputs and assign them to the proper variables.
+     *
+     * @param inNum This is the athlete's number.
+     * @param inPrefType This is the athlete's preferred type of event.
+     * @param inStamina This is the stamina of the athlete.
+     * @param inSkill This is the athlete's skill.
+     * @param inMedals This is the number of medals the athlete has won.
+     */
+    public Athlete(int inNum, String inPrefType, int inStamina, int inSkill, int inMedals)
+    {
+	setNum(inNum);
+	setPrefType(inPrefType);
+	setStamina(inStamina);
+	setSkill(inSkill);
+	setMedals(inMedals);
+    }
+
+    /**
+     * This setNum method will set the athlete's number to the given input.
+     *
+     * @param inNum This is the athlete's number.
+     */
+    public void setNum(int inNum)
+    {
+	athNum = inNum;
+    }
+
+    /**
+     * This setPrefType method will set the athlete's preffered type of event.
+     *
+     * @param inPrefType This is the athlete's preferred type.
+     */
+    public void setPrefType(String inPrefType)
+    {
+	prefType = inPrefType;
+    }
+
+    /**
+     * This setStamina method will set the athlete's stamina from 0-100.
+     *
+     * @param inStamina This is the athlete's stamina.
+     */
+    public void setStamina(int inStamina)
+    {
+	stamina = inStamina;
+    }
+
+    /**
+     * This setSkill method will set the athlete's skill level from 0-10.
+     *
+     * @param inSkill This is the athlete's skill level.
+     */
+    public void setSkill(int inSkill)
+    {
+	skill = inSkill;
+    }
+}
